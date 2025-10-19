@@ -1,5 +1,6 @@
 {
   "name": "Test Blog 1",
+  "slug": "test-blog-1",
   "tags": ["cool", "test", "first"],
   "date": "2025-10-19"
 }

@@ -1,17 +1,22 @@
+import type Blog from "../../types/Blog.ts";
 
-function ListView() {
+function ListView({blogs}: { blogs: Blog[] }) {
 
-  return (
-    <>
-      <div className="bg-red-500">
+    return (
+        <>
+            <div className="bg-red-500">
 
-          <div className="h-50">
-              <p>Hello world</p>
-          </div>
+                <div className="h-50">
 
-      </div>
-    </>
-  )
+                    {blogs.map((item, index) => (
+                        <p className="whitespace-nowrap select-none" key={index}>{item["name"]}</p>
+                    ))}
+
+                </div>
+
+            </div>
+        </>
+    )
 }
 
 export default ListView
