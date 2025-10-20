@@ -1,19 +1,16 @@
 import type Blog from "../../types/Blog.ts";
+import BlogItem from "../lists/BlogItem.tsx";
 
 function ListView({blogs}: { blogs: Blog[] }) {
 
     return (
         <>
-            <div className="bg-red-500">
-
-                <div className="h-50">
-
-                    {blogs.map((item, index) => (
-                        <p className="whitespace-nowrap select-none" key={index}>{item["name"]}</p>
+            <div>
+                <div className="grid gap-2">
+                    {blogs.map((blog, index) => (
+                        <BlogItem blog={blog} key={index} />
                     ))}
-
                 </div>
-
             </div>
         </>
     )

@@ -29,9 +29,10 @@ for (const entry of entries) {
                 let blog = {
                     "id": id++,
                     "name": data.name,
+                    "desc": data.desc,
                     "slug": data.slug,
                     "tags": data.tags,
-                    "date": data.date,
+                    "date": data.date
                 }
 
                 allBlogs["blogs"].push(blog)
