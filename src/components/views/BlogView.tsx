@@ -1,15 +1,31 @@
+import type Blog from "../../types/Blog.ts";
+import Markdown from 'react-markdown'
+import {useEffect, useState} from "react";
 
-function BlogView() {
+function BlogView({blog}: { blog: Blog | null }) {
+    const [content, setContent] = useState<string>("");
+
+    useEffect(() => {
+        if (blog){
+            fetch(`/data/blog/${blog.slug}/blog.md`)
+                .then((res) => res.text())
+                .then(setContent)
+        }
+    }, [blog]);
 
     return (
         <>
-            <div className="bg-red-500">
+            {blog &&(
+                <div className="">
 
-                <div className="h-50">
-                    <p>Hello world</p>
+                    <div className="h-50">
+                        <p>{blog.name}</p>
+
+                        <Markdown>{content}</Markdown>
+                    </div>
+
                 </div>
-
-            </div>
+            )}
         </>
     )
 }

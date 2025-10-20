@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-const blogDir:string = path.join(process.cwd(), "data/blog");
+const blogDir:string = path.join(process.cwd(), "public/data/blog");
 const outputFile:string = path.join(process.cwd(), "public/data/blogs.json");
 
 let allBlogs:{} = {
