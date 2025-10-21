@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
-h1 {
-    @apply bg-red-500;
+body {
+    background-color: #f8f8f5;
+    background-image: repeating-linear-gradient(0deg, #f8f8f5, #f8f8f5 24px, #f9f9f7 25px);
 }

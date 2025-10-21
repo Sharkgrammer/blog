@@ -1,6 +1,7 @@
 import type Blog from "../../types/Blog.ts";
 import Markdown from 'react-markdown'
 import {useEffect, useState} from "react";
+import '../../assets/page.css';
 
 function BlogView({blog}: { blog: Blog | null }) {
     const [content, setContent] = useState<string>("");
@@ -16,14 +17,8 @@ function BlogView({blog}: { blog: Blog | null }) {
     return (
         <>
             {blog &&(
-                <div className="">
-
-                    <div className="h-50">
-                        <p>{blog.name}</p>
-
-                        <Markdown>{content}</Markdown>
-                    </div>
-
+                <div className="markdown">
+                    <Markdown>{content}</Markdown>
                 </div>
             )}
         </>
