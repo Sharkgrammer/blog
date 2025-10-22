@@ -2,10 +2,10 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 const corePath = path.join(process.cwd(), "public/data/")
-const blogDir:string = path.join(corePath, "blog");
-const outputFile:string = path.join(corePath, "blogs.json");
+const blogDir = path.join(corePath, "blog");
+const outputFile = path.join(corePath, "blogs.json");
 
-let allBlogs:{} = {
+let allBlogs = {
     "blogs":[],
     "tags":{}
 };
@@ -20,7 +20,7 @@ let id = 0
 console.log("Starting to compile blogs")
 for (const entry of entries) {
     if (entry.isDirectory()) {
-        const metadataPath:string = path.join(blogDir, entry.name, "metadata.json");
+        const metadataPath = path.join(blogDir, entry.name, "metadata.json");
 
         if (fs.existsSync(metadataPath)) {
             try {

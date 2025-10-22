@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "tsc ./scripts/compileBlogs.ts --outDir ./dist/scripts && node ./dist/scripts/compileBlogs.js",
+    "prebuild": "node ./scripts/compileBlogs.js",
     "build": "npm run prebuild && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
