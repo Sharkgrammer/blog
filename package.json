@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "ts-node ./scripts/compileBlogs.ts",
+    "prebuild": "ts-node --loader ts-node/esm ./scripts/compileBlogs.ts",
     "build": "npm run prebuild && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
