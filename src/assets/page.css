@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .markdown {
-    @apply font-serif text-gray-800 leading-relaxed;
+    @apply font-serif text-gray-800 leading-relaxed pb-4;
 }
 
 .markdown h1 {

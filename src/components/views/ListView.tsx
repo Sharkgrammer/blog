@@ -5,7 +5,7 @@ function ListView({blogs}: { blogs: Blog[] }) {
 
     return (
         <>
-            <div>
+            <div className="py-8">
                 <div className="grid gap-2">
                     {blogs.map((blog, index) => (
                         <BlogItem blog={blog} key={index} />

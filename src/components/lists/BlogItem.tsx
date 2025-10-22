@@ -1,19 +1,16 @@
 import type Blog from "../../types/Blog.ts";
 import { Link } from "react-router";
 
-function BlogItem({blog}: { blog: Blog }) {
-
+function BlogItem({ blog }: { blog: Blog }) {
     return (
-        <>
-            <Link to={{pathname: "/", search: `blog=${blog.slug}`}} className="border-black border-2 rounded-2xl p-2 cursor-pointer">
-                <p className="whitespace-nowrap select-none">{blog.name}</p>
-                <p className="whitespace-nowrap select-none">{blog.desc}</p>
-                <p className="whitespace-nowrap select-none">{blog.slug}</p>
-                <p className="whitespace-nowrap select-none">{blog.id}</p>
-                <p className="whitespace-nowrap select-none">{blog.date}</p>
-            </Link>
-        </>
-    )
+        <Link to={{ pathname: "/", search: `blog=${blog.slug}` }}
+              className="block p-3 border-b border-gray-300 hover:bg-gray-50 transition">
+            <h2 className="text-lg font-bold text-gray-900">{blog.name}</h2>
+            <p className="text-sm text-gray-600 italic">{blog.date}</p>
+            <p className="mt-1 text-gray-800 leading-snug">{blog.desc}</p>
+        </Link>
+    );
 }
 
-export default BlogItem
+export default BlogItem;
+
