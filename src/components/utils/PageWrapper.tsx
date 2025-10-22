@@ -10,7 +10,7 @@ function PageWrapper({children}: { children: any }) {
     async function getBlogData() {
         // If this ever becomes a network function, it'll need more checks
         // However for now if it can't read the json file we've got bigger problems
-        setBlogData(await fetch("/data/blogs.json").then((r) => r.json()))
+        setBlogData(await fetch("/blog/data/blogs.json").then((r) => r.json()))
     }
 
     function sortBlogsByDate(blogs: Blog[] | undefined){

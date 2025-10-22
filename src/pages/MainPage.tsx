@@ -9,7 +9,7 @@ function MainPage() {
 
     function getBlog(blogData:Blog[] | null){
         if (!blogData) return null;
-        let slug:string = searchParams.get("blog")!;
+        let slug:string = searchParams.get("p")!;
 
         let blog = blogData.find(b => b.slug === slug);
         return blog === undefined ? null : blog;
@@ -19,7 +19,7 @@ function MainPage() {
         <PageWrapper>
             {(blogData:Blog[] | null) => (
                 <div>
-                    {searchParams.has("blog") ? (
+                    {searchParams.has("p") ? (
                         <BlogView blog={getBlog(blogData)} />
                     ) : (
                         blogData && (<ListView blogs={blogData} />)

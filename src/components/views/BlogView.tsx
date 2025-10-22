@@ -8,7 +8,7 @@ function BlogView({blog}: { blog: Blog | null }) {
 
     useEffect(() => {
         if (blog){
-            fetch(`/data/blog/${blog.slug}/blog.md`)
+            fetch(`/blog/data/blog/${blog.slug}/blog.md`)
                 .then((res) => res.text())
                 .then(setContent)
         }
