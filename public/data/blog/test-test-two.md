@@ -1,3 +1,9 @@
+---
+name: "A Gentle Start to the Week"
+desc: "Gen AI talks about the weather"
+meta: ["test"]
+date: "2025-10-24"
+---
 # A Gentle Start to the Week
 
 Yoinked from gen AI

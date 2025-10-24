@@ -1,3 +1,9 @@
+---
+name: "Markdown Test Page"
+desc: "In which I test the pages"
+meta: ["test"]
+date: "2025-10-23"
+---
 # This is a h1
 ## This is a h2
 ### This is a h3

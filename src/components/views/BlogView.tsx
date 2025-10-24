@@ -1,16 +1,24 @@
 import type Blog from "../../types/Blog.ts";
 import Markdown from 'react-markdown'
+import fm from 'front-matter'
 import {useEffect, useState} from "react";
 import '../../assets/page.css';
 
 function BlogView({blog}: { blog: Blog | null }) {
-    const [content, setContent] = useState<string>("");
+    const [body, setBody] = useState<string>("");
+    //const [attributes, setAttributes] = useState<{}>("");
+
+    async function setData(data: any){
+        let rawData = fm(data);
+        setBody(rawData.body)
+        //setAttributes(rawData.attributes)
+    }
 
     useEffect(() => {
         if (blog){
-            fetch(`/blog/data/blog/${blog.slug}/blog.md`)
+            fetch(`/blog/data/blog/${blog.slug}.md`)
                 .then((res) => res.text())
-                .then(setContent)
+                .then(setData)
         }
     }, [blog]);
 
@@ -18,7 +26,7 @@ function BlogView({blog}: { blog: Blog | null }) {
         <>
             {blog &&(
                 <div className="markdown">
-                    <Markdown>{content}</Markdown>
+                    <Markdown>{body}</Markdown>
                 </div>
             )}
         </>
