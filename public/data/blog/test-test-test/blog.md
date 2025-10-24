@@ -6,7 +6,7 @@
 
 This is just basic text
 
-This is **bold text** and this is __italic text__
+This is **bold text** and this is *italic text*
 
 > this is apparently a blockquote
 
