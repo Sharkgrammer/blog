@@ -3,6 +3,7 @@ name: "A Gentle Start to the Week"
 desc: "Gen AI talks about the weather"
 meta: ["test"]
 date: "2025-10-24"
+publish: false
 ---
 # A Gentle Start to the Week
 

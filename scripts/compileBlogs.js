@@ -25,6 +25,10 @@ for (const file of files) {
             const data = fm(fs.readFileSync(path.join(blogDir, file.name), "utf8")).attributes;
             let slug = file.name.replace(".md", "");
 
+            if (!data.publish){
+                continue
+            }
+
             let blog = {
                 "id": id++,
                 "name": data.name,
