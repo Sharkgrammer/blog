@@ -30,7 +30,7 @@ function PageWrapper({children}: { children: any }) {
             <div className="min-h-[100dvh] flex flex-col w-full px-2 py-5">
                 <div className="border-b-2 flex justify-center px-2 border-black hover:border-gray-800">
                     <Link to="/" className="text-2xl font-bold px-2 hover:text-gray-800">
-                        <h1>An interesting blog name</h1>
+                        <h1>Branches & Ideas</h1>
                     </Link>
                 </div>
 

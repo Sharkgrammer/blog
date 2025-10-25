@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="16" height="16">
+    <style>
+        :root { color-scheme: light dark}
+        /* Light-mode colour (solid) */
+        path, rect { stroke: #3A5F3A}
+        /* Dark-mode fallback: white for visibility */
+        @media (prefers-color-scheme: dark) {
+        path, rect { stroke: #A8D5A2}
+        }
+    </style>
+
+    <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10,8
+             C36,18 52,34 28,56
+             C20,48 14,36 10,8 Z"/>
+        <path d="M14,10
+             C28,22 32,36 28,54"/>
+    </g>
+</svg>
