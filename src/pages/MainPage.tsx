@@ -3,6 +3,7 @@ import ListView from "../components/views/ListView.tsx";
 import type Blog from "../types/Blog.ts";
 import { useSearchParams } from "react-router-dom";
 import BlogView from "../components/views/BlogView.tsx";
+import DummtListView from "../components/dummy/DummtListView.tsx";
 
 function MainPage() {
     const [searchParams] = useSearchParams();
@@ -22,7 +23,11 @@ function MainPage() {
                     {searchParams.has("p") ? (
                         <BlogView blog={getBlog(blogData)} />
                     ) : (
-                        blogData && (<ListView blogs={blogData} />)
+                        blogData ? (
+                            <ListView blogs={blogData} />
+                        ) : (
+                            <DummtListView />
+                        )
                     )}
                 </div>
             )}

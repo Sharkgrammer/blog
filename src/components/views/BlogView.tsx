@@ -3,6 +3,7 @@ import Markdown from 'react-markdown'
 import fm from 'front-matter'
 import {useEffect, useState} from "react";
 import '../../assets/page.css';
+import DummyBlogView from "../dummy/DummyBlogView.tsx";
 
 function BlogView({blog}: { blog: Blog | null }) {
     const [body, setBody] = useState<string>("");
@@ -24,10 +25,12 @@ function BlogView({blog}: { blog: Blog | null }) {
 
     return (
         <>
-            {blog &&(
+            {(blog && body) ? (
                 <div className="markdown">
                     <Markdown>{body}</Markdown>
                 </div>
+            ) : (
+                <DummyBlogView />
             )}
         </>
     )
