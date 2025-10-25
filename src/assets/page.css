@@ -24,8 +24,14 @@
     @apply border-l-4 border-gray-400 pl-4 italic text-gray-700 my-6;
 }
 
-.markdown code {
+.markdown code,
+.markdown pre code{
     @apply border-l-4 border-gray-800 pl-4 my-6 font-mono;
+}
+
+.markdown pre code {
+    display: block;
+    overflow-x: auto;
 }
 
 .markdown ul {
